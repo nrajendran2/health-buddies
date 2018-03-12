@@ -4,7 +4,7 @@ const { User } = require('../db/UserSchema.js')
 
 router.get('/', (req, res) => {
     User.find().then((users) => {
-        res.send(users)
+        res.json(users)
     }).catch((error) => {
         console.log(error)
     })

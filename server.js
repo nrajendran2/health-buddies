@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const mongoose = require('mongoose')
 const UserController = require ('./Controllers/userController')
+const MedicalConditionController = require('./Controllers/medicalConditionController')
+const TreatmentController = require('./Controllers/TreatmentController')
 
 
 //connect to mongoose
@@ -28,7 +30,9 @@ connection.on('error', (Error )=> {
 //MIDDLEWARE
 app.use(logger('dev'))
 app.use(bodyParser.json())
-app.use('api/users', UserController)
+app.use('/api/users', UserController)
+app.use('/api/users/:id/medicalcondition', MedicalConditionController )
+app.use('/api/users/:userid/medicalcondition/:id/treatment', TreatmentController )
 
 
 

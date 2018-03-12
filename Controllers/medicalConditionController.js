@@ -1,12 +1,11 @@
 const express = require('express')
 const router = express.Router({mergeParams: true})
-const { MedicalCondition } = require('../db/MedicalConditonSchema.js')
-
-
+const { MedicalCondition } = require('../db/MedicalCondition.js')
+const {User} = require('../db/UserSchema')
 
 router.get('/', (req,res) => {
-    MedicalCondition.find().then((condition) => {
-        res.send(condition)
+    User.findById(req.params.id).then((user) => {
+        res.json(user.medicalCondition)
     }).catch((error)=> {
         console.log(error)
     })
@@ -14,3 +13,10 @@ router.get('/', (req,res) => {
 })
 
 module.exports = router 
+
+
+
+
+
+
+

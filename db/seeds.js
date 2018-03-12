@@ -42,6 +42,7 @@ const sophia = new User ({
     name: "Sophia Guilliod",
     username:"SophiaGuilliod24",
     age: 50,
+    profilepic: "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/18620089_10154662006878435_2994886996107442469_n.jpg?oh=204ec350fe2b392d1fc5d726f355eb05&oe=5B49998C",
     medicalCondition: [breastcancer]
     
 })
