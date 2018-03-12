@@ -5,11 +5,14 @@ const logger = require('morgan')
 const mongoose = require('mongoose')
 const UserController = require ('./Controllers/userController')
 
-const app = express()
-
 
 //connect to mongoose
 mongoose.connect(process.env.MONGODB_URI)
+
+const app = express();
+
+
+
 
 
 //Logging if Database if is running or if there is an error
@@ -24,7 +27,7 @@ connection.on('error', (Error )=> {
 
 //MIDDLEWARE
 app.use(logger('dev'))
-app.use(bodyParser.json)
+app.use(bodyParser.json())
 app.use('api/users', UserController)
 
 
