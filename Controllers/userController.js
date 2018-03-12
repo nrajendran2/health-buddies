@@ -1,0 +1,14 @@
+const express = require('express')
+const router = express.Router({ mergeParams: true })
+const { User } = require('..db/UserScham.js')
+
+router.get('/', (req, res) => {
+    User.find().then((users) => {
+        res.send(users)
+    }).catch((error) => {
+        console.log(error)
+    })
+})
+
+
+module.exports = router 

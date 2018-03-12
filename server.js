@@ -24,8 +24,8 @@ connection.on('error', (Error )=> {
 //MIDDLEWARE
 app.use(logger('dev'))
 app.use(bodyParser.json)
-
-
+app.use('api/users', UserController)
+app.use()
 
 
 //routes

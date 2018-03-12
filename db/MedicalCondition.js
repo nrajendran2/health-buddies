@@ -7,7 +7,7 @@ const MedicalConditionSchema = new Schema ({
     description: String,
     symptoms: String, 
     dateStarted: String,
-    treatment: []
+    treatment: [TreatmentSchema]
 
 
 })

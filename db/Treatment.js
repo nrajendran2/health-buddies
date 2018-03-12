@@ -8,9 +8,15 @@ const TreatmentSchema = new Schema ({
     image: String,
     mediations: String,
     naturalRemedies: String,
+    otherComments: String,
 
 })
 
 
 //MODEL
 const Treatment = mongoose.model("Treatemnt", TreatmentSchena)
+
+module.exports = {
+    Treatment,
+    TreatmentSchema
+}
