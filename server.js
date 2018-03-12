@@ -31,7 +31,7 @@ connection.on('error', (Error )=> {
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use('/api/users', UserController)
-app.use('/api/users/:id/medicalcondition', MedicalConditionController )
+app.use('/api/users/:userid/medicalcondition', MedicalConditionController )
 app.use('/api/users/:userid/medicalcondition/:id/treatment', TreatmentController )
 
 
