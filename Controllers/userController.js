@@ -11,4 +11,23 @@ router.get('/', (req, res) => {
 })
 
 
+
+  router.post('/', (req, res) => {
+    const newUser = new User({
+        name: req.body.name,
+        username: req.body.username,
+        age: req.body.age,
+        profilepic:req.body.profilepic
+    })
+    newUser.save().then((savedUser) => {
+  
+        res.send(savedUser)
+  
+    }).catch((err) => {
+        conosle.log(err)
+    })
+  })
+  
+
+
 module.exports = router 
