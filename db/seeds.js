@@ -7,6 +7,6 @@ const sophia = new User ({
     name: "Sophia Guilliod",
     username:"SophiaGuilliod24",
     age: 50,
-    medicalCondition: []
+    //medicalCondition: []
     
 })

@@ -5,7 +5,7 @@ const { MedicalCondition } = require('../db/MedicalConditonSchema.js')
 
 
 router.get('/', (req,res) => {
-    MedicalCondition.find().then((condition )=> {
+    MedicalCondition.find().then((condition) => {
         res.send(condition)
     }).catch((error)=> {
         console.log(error)

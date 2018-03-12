@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-
 const Schema = mongoose.Schema
+const {MedicalConditionSchema} = require('./MedicalCondition')
 
 
 const UserSchema = new Schema ({

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+
 const Schema = mongoose.Schema 
 
 const TreatmentSchema = new Schema ({
@@ -14,7 +15,7 @@ const TreatmentSchema = new Schema ({
 
 
 //MODEL
-const Treatment = mongoose.model("Treatemnt", TreatmentSchena)
+const Treatment = mongoose.model("Treatment", TreatmentSchema)
 
 module.exports = {
     Treatment,

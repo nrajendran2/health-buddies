@@ -3,6 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const mongoose = require('mongoose')
+const UserController = require ('./Controllers/userController')
 
 const app = express()
 
@@ -25,7 +26,7 @@ connection.on('error', (Error )=> {
 app.use(logger('dev'))
 app.use(bodyParser.json)
 app.use('api/users', UserController)
-app.use()
+
 
 
 //routes
