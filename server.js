@@ -37,9 +37,16 @@ app.use('/api/users/:userid/medicalcondition/:id/treatment', TreatmentController
 
 
 //routes
-app.get('/', (req, res) => {
-    res.send("Hell World")
-})
+
+app.use(express.static(`${__dirname}/client/build`))
+// app.get('/', (req, res) => {
+//     res.send("Hell World")
+// })
+
+
+app.get('/*', (req, res) => {
+    res.sendFile(`${__dirname}/client/build/index.html`)
+  })
 
 
 
