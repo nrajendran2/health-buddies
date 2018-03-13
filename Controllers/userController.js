@@ -28,6 +28,13 @@ router.get('/', (req, res) => {
     })
   })
   
+  router.get('/:id', (req,res) => {
+      User.findById(req.params.id).then((user) => {
+          res.send(user)
+      }).catch((error) => {
+          console.log(error)
+      })
+  })
 
 
 module.exports = router 
