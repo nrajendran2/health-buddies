@@ -4,9 +4,7 @@ import Signup from './Signup'
 import styled from 'styled-components'
 import axios from 'axios'
 
- const state = {
-    users: []
-}
+
 
 
 const SignupWrapper = styled.div`
@@ -17,15 +15,25 @@ background-size: cover;
 
 
 
-axios.get(`/api/users`).then((res) => {
-    console.log(res.data)
-    this.setState({users:res.data})
-})
-
-
 
 class HomeView extends Component {
 
+     state = {
+        users: []
+    }
+
+    componentDidMount() {
+        this.getAllUsers()
+    }
+
+
+
+    getAllUsers = () => {
+        axios.get(`/api/users`).then((res) => {
+            console.log(res.data)
+            this.setState({ users: res.data })
+        })
+    }
 
     render() {
         return (
@@ -36,13 +44,32 @@ class HomeView extends Component {
                     <h1>ofdjasoid
 
                     </h1>
-               
 
-                <h1>Hello World from HomeView </h1>
-                <Signup />
+
+                    <h1>Hello World from HomeView </h1>
+
+
+                    <Signup />
+
+
+                    {
+            this.state.users.map((user, i) => {
+                return(
+                    <div key = {i}>
+                        
+
+                   <li> {user.name}</li>
+                    
+                    </div>
+                )
+
+            }) 
+            
+        }
 
                 </div>
             </SignupWrapper>
+
         );
     }
 }

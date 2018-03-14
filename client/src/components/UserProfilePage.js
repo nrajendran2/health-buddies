@@ -59,7 +59,7 @@ getuserinfo = () => {
         {
             this.state.userinfo.medicalCondition.map((condition, i) => {
                 return(
-                    <div>
+                    <div key = {i}>
 
                    <li> {condition.name}</li>
                     <li>{condition.description}</li>
