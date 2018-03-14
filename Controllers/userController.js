@@ -38,5 +38,15 @@ router.get('/', (req, res) => {
 
   
 
+  router.delete('/:id', (req, res) => {
+    User.findById(req.params.id).then((user) => {
+        user.remove()
+        return user.save()
+    }).then(() => {
+        res.send('DELETED')
+    })
+
+})
+
 
 module.exports = router 
