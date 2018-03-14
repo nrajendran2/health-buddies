@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
+import MedicalCondition from './MedicalCondition';
 
 const ProfileImage = styled.img`
 height: 300px;
@@ -15,7 +16,9 @@ border-radius: 50%;
 
 class UserProfilePage extends Component {
 state = {
-    userinfo: {}
+    userinfo: {
+        medicalCondition: []
+    }
 }
 
 componentDidMount(){
@@ -47,9 +50,27 @@ getuserinfo = () => {
     render() {
         return (
             <div>
-              {this.state.userinfo.username}
+              <h1>{this.state.userinfo.username}</h1>
                <ProfileImage src = {this.state.userinfo.profilepic}/>
                 <h1>PaperBoys United </h1>
+
+                <MedicalCondition userID = {this.props.match.params}/>
+
+        {
+            this.state.userinfo.medicalCondition.map((condition, i) => {
+                return(
+                    <div>
+
+                   <li> {condition.name}</li>
+                    <li>{condition.description}</li>
+                    <li> {condition.symptoms}</li>
+                    <li>{condition.dateStarted}</li>
+                    </div>
+                )
+
+            }) 
+            
+        }
 
                 
             </div>
@@ -58,3 +79,4 @@ getuserinfo = () => {
 }
 
 export default UserProfilePage;
+
