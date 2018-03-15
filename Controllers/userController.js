@@ -36,7 +36,18 @@ router.get('/', (req, res) => {
       })
   })
 
-  
+  router.patch('/:id', (req, res) => {
+    User.findById(req.params.id).then((user) => {
+      const userToUpdate = user
+      userToUpdate.username= req.body.username
+      userToUpdate.name = req.body.name 
+      userToUpdate.age = req.body.age 
+      userToUpdate.profilepic = req.body.profilepic 
+      return user.save()
+    }).then((savedUser) => {
+      res.send(savedUser)
+    })
+  })
 
   router.delete('/:id', (req, res) => {
     User.findById(req.params.id).then((user) => {
