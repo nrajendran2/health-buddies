@@ -9,7 +9,7 @@ import axios from 'axios'
 
 const SignupWrapper = styled.div`
 color: black;
-background-image: url('https://dingo.care2.com/pictures/greenliving/1415/1414934.large.jpg');
+background-image: url('http://www.env-health.org/IMG/siteon0.jpg?1340900275');
 background-size: cover;
 `
 
@@ -66,11 +66,10 @@ class HomeView extends Component {
                                 return (
                                     <div key={i}>
 
-                                        <li> {user.name}</li>
+                                        <Link to = {`/healthbuddies/${user._id}`}> {user.name}</Link>
 
                                         <button onClick={() => this.remove(user._id)}> Delete </button>
-                                        <button onClick={() => this.updateIdea(user._id)}>Edit User </button>
-
+                                        
                                     </div>
                                 )
 

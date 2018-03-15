@@ -16,7 +16,9 @@ class App extends Component {
       return <UserProfilePage {...props}/>
     }
 
-   
+   const EditPageWrapper = (props) => {
+     return <UserProfilePage {...props}/>
+   }
     // const StocksViewWrapper = (props) => {
     //   return <StockView stocks={this.state.stocks} {...props}/>
     // }
@@ -32,7 +34,7 @@ class App extends Component {
       <Switch>
       <Route exact path ='/' component = {HomeView}/>
       <Route exact path= '/healthbuddies/:userid' render = {MedicalConditionWrapper}/>
-      <Route exact path ='/healthbuddies/:userid/edit' render = {HomeView}/>
+      <Route exact path ='/healthbuddies/:userid/' render = {EditPageWrapper}/>
 
        </Switch>
 

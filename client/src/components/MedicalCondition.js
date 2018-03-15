@@ -38,7 +38,7 @@ class MedicalCondition extends Component {
     render() {
         return (
             <div>
-                <h1>Create A New User</h1>
+                <h1>Add New Medical Condition</h1>
                 <form onSubmit={this.saveNewMedicalCondition}>
                     <div>
                         <ul>
