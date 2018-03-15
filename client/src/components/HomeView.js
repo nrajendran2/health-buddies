@@ -18,15 +18,13 @@ background-size: cover;
 
 class HomeView extends Component {
 
-     state = {
+    state = {
         users: []
     }
 
     componentDidMount() {
         this.getAllUsers()
     }
-
- 
 
 
     getAllUsers = () => {
@@ -36,56 +34,57 @@ class HomeView extends Component {
         })
     }
 
-    remove =  async (userId) => {
-        
-       const res = await axios.delete(`/api/users/${userId}`) 
-       this.getAllUsers()
+   
+
+        remove = async (userId) => {
+
+            const res = await axios.delete(`/api/users/${userId}`)
+            this.getAllUsers()
             //await this.setState({ users: res.data })
 
         }
 
-    render() {
-        return (
-            <SignupWrapper >
-                <div>
+        render() {
+            return (
+                <SignupWrapper >
+                    <div>
 
 
-                    <h1>ofdjasoid
-
+                        <h1>ofdjasoid
+    
                     </h1>
 
 
-                    <h1>Hello World from HomeView </h1>
+                        <h1>Hello World from HomeView </h1>
 
 
-                    <Signup />
+                        <Signup />
 
 
-                    {
-            this.state.users.map((user, i) => {
-                return(
-                    <div key = {i}>
-                        
+                        {
+                            this.state.users.map((user, i) => {
+                                return (
+                                    <div key={i}>
 
-                   <li> {user.name}</li>
-                    
-                   <button onClick={() => this.remove(user._id)}> Delete </button>
+                                        <li> {user.name}</li>
 
-                  
+                                        <button onClick={() => this.remove(user._id)}> Delete </button>
+                                        <button onClick={() => this.updateIdea(user._id)}>Edit User </button>
+
+                                    </div>
+                                )
+
+                            })
+
+                        }
+
+
+
                     </div>
-                )
+                </SignupWrapper>
 
-            }) 
-            
+            );
         }
-
-
-                   
-                </div>
-            </SignupWrapper>
-
-        );
     }
-}
 
-export default HomeView;
+    export default HomeView;
