@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
         res.send(savedUser)
   
     }).catch((err) => {
-        conosle.log(err)
+        console.log(err)
     })
   })
   

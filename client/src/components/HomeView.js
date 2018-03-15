@@ -26,6 +26,7 @@ class HomeView extends Component {
         this.getAllUsers()
     }
 
+ 
 
 
     getAllUsers = () => {
@@ -34,6 +35,14 @@ class HomeView extends Component {
             this.setState({ users: res.data })
         })
     }
+
+    remove =  async (userId) => {
+        
+       const res = await axios.delete(`/api/users/${userId}`) 
+       this.getAllUsers()
+            //await this.setState({ users: res.data })
+
+        }
 
     render() {
         return (
@@ -60,6 +69,9 @@ class HomeView extends Component {
 
                    <li> {user.name}</li>
                     
+                   <button onClick={() => this.remove(user._id)}> Delete </button>
+
+                  
                     </div>
                 )
 
@@ -67,6 +79,8 @@ class HomeView extends Component {
             
         }
 
+
+                   
                 </div>
             </SignupWrapper>
 
