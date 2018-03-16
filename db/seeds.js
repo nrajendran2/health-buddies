@@ -32,6 +32,7 @@ const masectomy = new Treatment ({
 
 const breastcancer =  new MedicalCondition ({
     name: "Breast Cancer",
+    description: "Just a bit of a hard place near the mammary gland",
     symptoms: "Lump in chest, pain in chest",
     dateStarted: "3/04/18",
     treatment: [masectomy]

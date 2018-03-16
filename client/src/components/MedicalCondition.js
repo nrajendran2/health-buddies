@@ -39,10 +39,12 @@ class MedicalCondition extends Component {
         return (
             <div>
                 <h1>Add New Medical Condition</h1>
+                
                 <form onSubmit={this.saveNewMedicalCondition}>
                     <div>
                         <ul>
-                            <li><label htmlFor="name">Name of Condition</label>
+                                \
+                            <li> <label htmlFor="name">Name of Condition</label>
                                 <input type="text" name="name"
                                     value={this.state.name}
                                     onChange={this.handleChange}

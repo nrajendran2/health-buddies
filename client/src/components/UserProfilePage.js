@@ -10,29 +10,49 @@ width: 300px;
 display: flex;
 border-radius: 50%;
 align-items: center;
+background-color: white;
 
 `
 const FlexContainers = styled.div`
-background-image: url('https://www.dreamstime.com/stock-images-happy-group-doctors-holding-placard-image16186114');
+
 background-size: cover;
 display:flex;
 flex-direction: column;
-border: solid;
-background-color: purple;
+border: solid black;
+/* background: -webkit-linear-gradient(top, purple, #a856c9);
+  background: -moz-linear-gradient(top, purple, #a856c9);
+  background: -o-linear-gradient(top, purple #a856c9);
+  background: linear-gradient(top, purple, #a856c9); */
 font-family: 'Times New Roman', Times, serif;
+background-color: white;
 `
 
 const MedicalConditonContainer = styled.div`
 display: flex;
-flex-direction: row;
-background-color: black;
-color: white;`
+flex-direction: column;
+color: black;
+border: solid;
+justify-content: center;
+font-family: Arial;
+font-size: 18px;
+max-width: 200px;
+padding: 100px 100px;
+
+  /* background: -webkit-linear-gradient(top, purple, #a856c9);
+  background: -moz-linear-gradient(top, purple, #a856c9);
+  background: -o-linear-gradient(top, purple #a856c9);
+  background: linear-gradient(top, purple, #a856c9); */
+
+`
+
+
 
 const MedicalConditionBox = styled.div`
-display: flex;
-flex-direction: column;
+display: block;
+flex-direction: row;
 justify-content: space-between;
 align-content: center;
+
 `
 
 
@@ -77,7 +97,7 @@ getuserinfo = () => {
                <ProfileImage src = {this.state.userinfo.profilepic}/>
 
 
-                </FlexContainers>
+         
                
 
                 <MedicalCondition userID = {this.props.match.params}/>
@@ -111,6 +131,7 @@ getuserinfo = () => {
             
         }
         <EditUserPage userId = {this.props.match.params}/>
+        </FlexContainers>
 
             </div>
         );
