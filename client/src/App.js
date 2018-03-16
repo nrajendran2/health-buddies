@@ -34,7 +34,7 @@ class App extends Component {
       <Switch>
       <Route exact path ='/' component = {HomeView}/>
       <Route exact path= '/healthbuddies/:userid' render = {MedicalConditionWrapper}/>
-      <Route exact path ='/healthbuddies/:userid/' render = {EditPageWrapper}/>
+      <Route exact path ='/healthbuddies/:userid/' render = {HomeView}/>
 
        </Switch>
 

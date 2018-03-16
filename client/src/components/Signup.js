@@ -50,7 +50,7 @@ class SignUp extends Component {
 
         return (
             <div>
-                <h1>Create A New User</h1>
+                <h2>Create A New User</h2>
                 <form onSubmit={this.saveNewUser}>
                     <div>
                         <ul>

@@ -19,6 +19,29 @@ router.get('/', (req, res) => {
         })
 
 })
+router.post('/', (req, res) => {
+    const userId = req.params.userid
+    console.log(userId)
+    User.findById(userId).then((user) => {
+        console.log(user)
+
+        const newMedicalCondition = new MedicalCondition({
+            name: req.body.name,
+            symptoms: req.body.symptoms,
+            dateStarted: req.body.dateStarted
+        })
+
+        user.medicalCondition.push(newMedicalCondition)
+
+        // Save User
+        return user.save()
+    }).then((updatedUser) => {
+
+        //redirect to medical conditions 
+        res.redirect(`/api/users/${userId}/medicalcondition`)
+
+    })
+})
 
 
 

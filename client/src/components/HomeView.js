@@ -11,6 +11,16 @@ const SignupWrapper = styled.div`
 color: black;
 background-image: url('http://www.env-health.org/IMG/siteon0.jpg?1340900275');
 background-size: cover;
+height: 300px;
+
+`
+const UsersContainer = styled.div`
+color:green;
+display:flex;
+flex-direction: column;
+margin: 10px 10px;
+padding: 20px 20px;
+border:solid;
 `
 
 
@@ -34,56 +44,57 @@ class HomeView extends Component {
         })
     }
 
-   
 
-        remove = async (userId) => {
 
-            const res = await axios.delete(`/api/users/${userId}`)
-            this.getAllUsers()
-            //await this.setState({ users: res.data })
+    remove = async (userId) => {
 
-        }
+        const res = await axios.delete(`/api/users/${userId}`)
+        this.getAllUsers()
+        //await this.setState({ users: res.data })
 
-        render() {
-            return (
+    }
+
+    render() {
+        return (
+            <div>
                 <SignupWrapper >
                     <div>
 
 
-                        <h1>ofdjasoid
-    
-                    </h1>
 
+                   
 
-                        <h1>Hello World from HomeView </h1>
+                        <h1>HealthBuddies </h1>
 
 
                         <Signup />
 
-
-                        {
-                            this.state.users.map((user, i) => {
-                                return (
-                                    <div key={i}>
-
-                                        <Link to = {`/healthbuddies/${user._id}`}> {user.name}</Link>
-
-                                        <button onClick={() => this.remove(user._id)}> Delete </button>
-                                        
-                                    </div>
-                                )
-
-                            })
-
-                        }
-
-
-
                     </div>
                 </SignupWrapper>
+                <UsersContainer>
 
-            );
-        }
+                    {
+                        this.state.users.map((user, i) => {
+                            return (
+                                <div key={i}>
+
+                                    <li><Link to={`/healthbuddies/${user._id}`}> {user.name}</Link></li>
+
+                                    <button onClick={() => this.remove(user._id)}> Delete </button>
+
+                                </div>
+                            )
+
+                        })
+
+                    }
+
+
+                </UsersContainer>
+
+            </div>
+        );
     }
+}
 
-    export default HomeView;
+export default HomeView;
