@@ -22,7 +22,7 @@ db.on('error', (error) => {
 const masectomy = new Treatment ({
     name: "masectomy",
     doctor: "Dr. McQuail",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7g-RlT5q9ZLHw5A3rxc19-zoj7pdc_f7v55WspOfeTDMEo26Umg",
+    image: "http://1.bp.blogspot.com/-HKbJTltmG5Y/U_UCecMjPaI/AAAAAAAAD3E/xrtsF8emO1Y/s1600/mastectomy_modified_radical.jpg",
     medications: "Ibprofuen, Hydrochloride",
     naturalRemedies:"Exercise, Drawing, Painting with my Daughters",
     otherComments: "At first I was really scared of losing one of my breast, but Dr. McQuail walked me thorugh a plan and after 3 months it's been going well."

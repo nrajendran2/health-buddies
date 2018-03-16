@@ -19,10 +19,6 @@ background-size: cover;
 display:flex;
 flex-direction: column;
 border: solid black;
-/* background: -webkit-linear-gradient(top, red, #d6c5dd);
-  background: -moz-linear-gradient(top, red, #d6c5dd);
-  background: -o-linear-gradient(top, red, #d6c5dd);
-  background: linear-gradient(top, red, #d6c5dd); */
 font-family: 'Times New Roman', Times, serif;
 background-color: white;
 
@@ -76,6 +72,13 @@ font-size: 18px;
 max-width: 200px;
 padding: 100px 100px;
 border: solid;
+
+
+img { 
+    height: 200px;
+    width: 200px;
+
+}
 `
 
 
@@ -124,7 +127,7 @@ class UserProfilePage extends Component {
                     <ProfileImage src={this.state.userinfo.profilepic} />
 
 
-
+</FlexContainers>
 
 
                     <MedicalCondition userID={this.props.match.params} />
@@ -153,7 +156,7 @@ class UserProfilePage extends Component {
                                                        <h1> {ailment.name}</h1>
 
 
-                                                       <li> {ailment.image}</li>
+                                                      <img src = {ailment.image}/>
                                                        <li> {ailment.symptoms}</li>
                                                        <li> {ailment.doctor}</li>
                                                        <li> {ailment.medications}</li>
@@ -183,7 +186,7 @@ class UserProfilePage extends Component {
 
                     }
                     <EditUserPage userId={this.props.match.params} />
-                </FlexContainers>
+                
 
             </div>
         );
