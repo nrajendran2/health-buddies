@@ -60,34 +60,48 @@ justify-content: space-between;
 align-content: center;
 
 `
+const AilmentBox = styled.div`
+display:flex;
+flex-direction: column;
+justify-content: center;
+background: -webkit-linear-gradient(top, green, #5df711);
+background: -moz-linear-gradient(top, green, #5df711);
+background: -o-linear-gradient(top, green, #5df711);
+background: linear-gradient(top, green, #5df711);
+font-family: 'Permanent Marker', cursive;
+`
+
+
+
 
 
 class UserProfilePage extends Component {
-state = {
-    userinfo: {
-        medicalCondition: []
+    state = {
+        userinfo: {
+            medicalCondition: []
+
+        }
     }
-}
 
-componentDidMount(){
-    this.getuserinfo()
-}
-
+    componentDidMount() {
+        this.getuserinfo()
+    }
 
 
 
-getuserinfo = () => {
-    const userID = this.props.match.params.userid
-    console.log(userID)
 
-    axios.get(`/api/users/${userID}`)
-   .then((res)=> {
-         console.log(res.data) 
-         this.setState({userinfo:res.data})
+    getuserinfo = () => {
+        const userID = this.props.match.params.userid
+        console.log(userID)
 
-   })
+        axios.get(`/api/users/${userID}`)
+            .then((res) => {
+                console.log(res.data)
+                this.setState({ userinfo: res.data })
 
-}
+            })
+
+    }
 
 
 
@@ -98,46 +112,69 @@ getuserinfo = () => {
     render() {
         return (
             <div>
-            <FlexContainers>
-              <h1>{this.state.userinfo.username}'s Health Log</h1>
-               <ProfileImage src = {this.state.userinfo.profilepic}/>
+                <FlexContainers>
+                    <h1>{this.state.userinfo.username}'s Health Log</h1>
+                    <ProfileImage src={this.state.userinfo.profilepic} />
 
 
-         
-               
 
-                <MedicalCondition userID = {this.props.match.params}/>
 
-        {
-            this.state.userinfo.medicalCondition.map((condition, i) => {
-                return(
-                    <div key = {i}>
-                    <MedicalConditionBox>
-                   < MedicalConditonContainer>
-                        <h1>{condition.name}</h1>
-                    
-                    <li>{condition.description}</li>
-                    <li> {condition.symptoms}</li>
-                    <li>{condition.dateStarted}</li>
 
-                  </MedicalConditonContainer>
-                  </MedicalConditionBox>
-                  
-                  
+                    <MedicalCondition userID={this.props.match.params} />
 
-                    
-                    </div>
+                    {
+                        this.state.userinfo.medicalCondition.map((condition, i) => {
+                            return (
+                                <div key={i}>
+                                    <MedicalConditionBox>
+                                        < MedicalConditonContainer>
+                                            <h1>{condition.name}</h1>
 
-                    
-                )
-          
+                                            <li>{condition.description}</li>
+                                            <li> {condition.symptoms}</li>
+                                            <li>{condition.dateStarted}</li>
+                                            <br/>
+                                            <br/>
 
-            }) 
-        
-            
-        }
-        <EditUserPage userId = {this.props.match.params}/>
-        </FlexContainers>
+
+                                            {condition.treatment.map((ailment, i) => {
+                                                return (
+                                                    <div key={i}>
+
+                                                    <AilmentBox>
+                                                       <h1> {ailment.name}</h1>
+
+
+                                                       <li> {ailment.image}</li>
+                                                       <li> {ailment.symptoms}</li>
+                                                       <li> {ailment.doctor}</li>
+                                                       <li> {ailment.medications}</li>
+
+                                                       </AilmentBox>
+
+
+                                                    </div>
+                                                )
+                                            })}
+
+                                        </MedicalConditonContainer>
+                                    </MedicalConditionBox>
+
+
+
+
+                                </div>
+
+
+                            )
+
+
+                        })
+
+
+                    }
+                    <EditUserPage userId={this.props.match.params} />
+                </FlexContainers>
 
             </div>
         );
