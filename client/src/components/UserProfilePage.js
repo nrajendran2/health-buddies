@@ -20,7 +20,8 @@ display:flex;
 flex-direction: column;
 border: solid black;
 font-family: 'Times New Roman', Times, serif;
-background-color: white;
+background-color: black;
+color: white;
 
 `
 

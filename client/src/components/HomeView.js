@@ -17,17 +17,18 @@ height: 300px;
 const UsersContainer = styled.div`
 color:green;
 display:flex;
-justify-content: flex-start;
-align-content: flex-start;
+justify-content: center;
 margin: 10px 10px;
 padding: 20px 20px;
 border:solid;
-background-color: yellow;
+background-color: white;
 max-width: 300px;
-
+`
+const ContainerofUsers = styled.div`
+display:flex;
+justify-content: center;
 
 `
-
 
 
 
@@ -76,6 +77,8 @@ class HomeView extends Component {
 
                     </div>
                 </SignupWrapper>
+
+<ContainerofUsers>
                 <UsersContainer>
 
                     {
@@ -96,7 +99,7 @@ class HomeView extends Component {
 
 
                 </UsersContainer>
-
+                </ContainerofUsers>
             </div>
         );
     }
