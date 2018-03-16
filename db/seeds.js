@@ -22,14 +22,22 @@ db.on('error', (error) => {
 const masectomy = new Treatment ({
     name: "masectomy",
     doctor: "Dr. McQuail",
-    image: "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2017/09/29/16/35/bc-3651003-001-0-8col.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7g-RlT5q9ZLHw5A3rxc19-zoj7pdc_f7v55WspOfeTDMEo26Umg",
     medications: "Ibprofuen, Hydrochloride",
     naturalRemedies:"Exercise, Drawing, Painting with my Daughters",
     otherComments: "At first I was really scared of losing one of my breast, but Dr. McQuail walked me thorugh a plan and after 3 months it's been going well."
     
 })
 
-const rest = new Treatmet
+const rest = new Treatment ({
+name:"Hydration & Rest",
+doctor: "Dr. Nwiloh",
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7g-RlT5q9ZLHw5A3rxc19-zoj7pdc_f7v55WspOfeTDMEo26Umg",
+medications: "Ibprofuen",
+naturalRemedies:"Replinishing fluids, Throat Lozenge, Activity Restriction, and Bed Rest",
+otherComments: "It is awfuli in the beginning, you will be in so much pain. However, after listening to Dr.Nwiloh, I am feeling much better"
+})
+
 
 const breastcancer =  new MedicalCondition ({
     name: "Breast Cancer",
@@ -44,7 +52,7 @@ const mono =  new MedicalCondition ({
     description: "(mono) is often called the kissing disease. The virus that causes mono is transmitted through saliva, so you can get it through kissing, but you can also be exposed through a cough or sneeze, or by sharing a glass or food utensils with someone who has mono.",
     symptoms: "Feeling lethargic, loss of appetitie, loss of weight",
     dateStarted: "3/04/18",
-    treatment: [masectomy]
+    treatment: [rest]
 
 })
 
@@ -55,7 +63,7 @@ const sophia = new User ({
     username:"SophiaGuilliod24",
     age: 50,
     profilepic: "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/18620089_10154662006878435_2994886996107442469_n.jpg?oh=204ec350fe2b392d1fc5d726f355eb05&oe=5B49998C",
-    medicalCondition: [breastcancer]
+    medicalCondition: [breastcancer, mono]
     
 })
 
