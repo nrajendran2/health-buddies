@@ -43,7 +43,7 @@ class MedicalCondition extends Component {
                 <form onSubmit={this.saveNewMedicalCondition}>
                     <div>
                         <ul>
-                                \
+                                
                             <li> <label htmlFor="name">Name of Condition</label>
                                 <input type="text" name="name"
                                     value={this.state.name}

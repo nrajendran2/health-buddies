@@ -6,6 +6,13 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import axios from 'axios'
 import UserProfilePage from './components/UserProfilePage'
 import MedicalCondition from './components/MedicalCondition'
+import {injectGlobal} from 'styled-components'
+
+
+injectGlobal`
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+`
+
 
 
 class App extends Component {

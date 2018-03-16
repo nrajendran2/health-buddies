@@ -19,12 +19,13 @@ background-size: cover;
 display:flex;
 flex-direction: column;
 border: solid black;
-/* background: -webkit-linear-gradient(top, purple, #a856c9);
-  background: -moz-linear-gradient(top, purple, #a856c9);
-  background: -o-linear-gradient(top, purple #a856c9);
-  background: linear-gradient(top, purple, #a856c9); */
+/* background: -webkit-linear-gradient(top, red, #d6c5dd);
+  background: -moz-linear-gradient(top, red, #d6c5dd);
+  background: -o-linear-gradient(top, red, #d6c5dd);
+  background: linear-gradient(top, red, #d6c5dd); */
 font-family: 'Times New Roman', Times, serif;
 background-color: white;
+
 `
 
 const MedicalConditonContainer = styled.div`
@@ -37,6 +38,11 @@ font-family: Arial;
 font-size: 18px;
 max-width: 200px;
 padding: 100px 100px;
+background: -webkit-linear-gradient(top, maroon, #d6c5dd);
+  background: -moz-linear-gradient(top, maroon, #d6c5dd);
+  background: -o-linear-gradient(top, maroon, #d6c5dd);
+  background: linear-gradient(top, maroon, #d6c5dd);
+  font-family: 'Permanent Marker', cursive;
 
   /* background: -webkit-linear-gradient(top, purple, #a856c9);
   background: -moz-linear-gradient(top, purple, #a856c9);
@@ -108,8 +114,8 @@ getuserinfo = () => {
                     <div key = {i}>
                     <MedicalConditionBox>
                    < MedicalConditonContainer>
-
-                   <li> {condition.name}</li>
+                        <h1>{condition.name}</h1>
+                    
                     <li>{condition.description}</li>
                     <li> {condition.symptoms}</li>
                     <li>{condition.dateStarted}</li>
