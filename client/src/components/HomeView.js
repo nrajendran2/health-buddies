@@ -12,7 +12,7 @@ color: black;
 background-image: url('http://www.env-health.org/IMG/siteon0.jpg?1340900275');
 background-size: cover;
 height: 300px;
-
+font-family: 'Lobster', cursive;
 `
 const UsersContainer = styled.div`
 color:green;

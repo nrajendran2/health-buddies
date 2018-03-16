@@ -5,7 +5,7 @@ import MedicalCondition from './MedicalCondition';
 import EditUserPage from './EditUserPage';
 
 const ProfileImage = styled.img`
-height: 300px;
+height: 400px;
 width: 300px;
 display: flex;
 border-radius: 50%;
