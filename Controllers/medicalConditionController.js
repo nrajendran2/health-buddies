@@ -20,6 +20,7 @@ router.post('/', (req, res) => {
 
         const newMedicalCondition = new MedicalCondition({
             name: req.body.name,
+            description:req.body.description,
             symptoms: req.body.symptoms,
             dateStarted: req.body.dateStarted
         })

@@ -18,11 +18,12 @@ background-size: cover;
 display:flex;
 flex-direction: column;
 border: solid;
+background-color: purple;
 `
 
 const MedicalConditonContainer = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 background-color: black;
 color: white;`
 
@@ -67,6 +68,9 @@ getuserinfo = () => {
             <FlexContainers>
               <h1>{this.state.userinfo.username}</h1>
                <ProfileImage src = {this.state.userinfo.profilepic}/>
+
+
+                </FlexContainers>
                
 
                 <MedicalCondition userID = {this.props.match.params}/>
@@ -97,7 +101,6 @@ getuserinfo = () => {
         }
         <EditUserPage userId = {this.props.match.params}/>
 
-                </FlexContainers>
             </div>
         );
     }
