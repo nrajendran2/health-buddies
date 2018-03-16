@@ -7,7 +7,7 @@ const TreatmentSchema = new Schema ({
     name: String,
     doctor: String,
     image: String,
-    mediations: String,
+    medications: String,
     naturalRemedies: String,
     otherComments: String,
 

@@ -17,7 +17,8 @@ height: 300px;
 const UsersContainer = styled.div`
 color:green;
 display:flex;
-flex-direction: column;
+justify-content: flex-start;
+align-content: flex-start;
 margin: 10px 10px;
 padding: 20px 20px;
 border:solid;
