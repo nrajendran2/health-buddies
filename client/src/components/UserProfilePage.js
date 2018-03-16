@@ -66,10 +66,10 @@ display:flex;
 flex: wrap;
 flex-direction: column;
 justify-content: center;
-background: -webkit-linear-gradient(top, green, #5df711);
-background: -moz-linear-gradient(top, green, #5df711);
-background: -o-linear-gradient(top, green, #5df711);
-background: linear-gradient(top, green, #5df711);
+background: -webkit-linear-gradient(top, darkgreen, #5df711);
+background: -moz-linear-gradient(top, darkgreen, #5df711);
+background: -o-linear-gradient(top, darkgreen, #5df711);
+background: linear-gradient(top, darkgreen, #5df711);
 font-family: 'Permanent Marker', cursive;
 font-family: 'Sorts Mill Goudy', serif;
 font-size: 18px;
@@ -157,6 +157,7 @@ class UserProfilePage extends Component {
                                                        <li> {ailment.symptoms}</li>
                                                        <li> {ailment.doctor}</li>
                                                        <li> {ailment.medications}</li>
+                                                       <li>{ailment.otherComments}</li>
 
                                                        </AilmentBox>
 

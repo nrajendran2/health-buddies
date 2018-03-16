@@ -25,10 +25,11 @@ const masectomy = new Treatment ({
     image: "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2017/09/29/16/35/bc-3651003-001-0-8col.jpg",
     medications: "Ibprofuen, Hydrochloride",
     naturalRemedies:"Exercise, Drawing, Painting with my Daughters",
-    OtherComments: "At first I was really scared of losing one of my breast, but Dr. McQuail walked me thorugh a plan and after 3 months it's been going well."
+    otherComments: "At first I was really scared of losing one of my breast, but Dr. McQuail walked me thorugh a plan and after 3 months it's been going well."
     
 })
 
+const rest = new Treatmet
 
 const breastcancer =  new MedicalCondition ({
     name: "Breast Cancer",
@@ -37,6 +38,16 @@ const breastcancer =  new MedicalCondition ({
     dateStarted: "3/04/18",
     treatment: [masectomy]
 })
+
+const mono =  new MedicalCondition ({
+    name: "Mononucleosis",
+    description: "(mono) is often called the kissing disease. The virus that causes mono is transmitted through saliva, so you can get it through kissing, but you can also be exposed through a cough or sneeze, or by sharing a glass or food utensils with someone who has mono.",
+    symptoms: "Feeling lethargic, loss of appetitie, loss of weight",
+    dateStarted: "3/04/18",
+    treatment: [masectomy]
+
+})
+
 
 
 const sophia = new User ({
