@@ -10,7 +10,7 @@ import {injectGlobal} from 'styled-components'
 
 
 injectGlobal`
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Sorts+Mill+Goudy');
 `
 
 

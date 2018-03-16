@@ -43,6 +43,7 @@ background: -webkit-linear-gradient(top, maroon, #d6c5dd);
   background: -o-linear-gradient(top, maroon, #d6c5dd);
   background: linear-gradient(top, maroon, #d6c5dd);
   font-family: 'Permanent Marker', cursive;
+font-family: 'Sorts Mill Goudy', serif;
 
   /* background: -webkit-linear-gradient(top, purple, #a856c9);
   background: -moz-linear-gradient(top, purple, #a856c9);
@@ -54,7 +55,7 @@ background: -webkit-linear-gradient(top, maroon, #d6c5dd);
 
 
 const MedicalConditionBox = styled.div`
-display: block;
+display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-content: center;
@@ -62,6 +63,7 @@ align-content: center;
 `
 const AilmentBox = styled.div`
 display:flex;
+flex: wrap;
 flex-direction: column;
 justify-content: center;
 background: -webkit-linear-gradient(top, green, #5df711);
@@ -69,6 +71,11 @@ background: -moz-linear-gradient(top, green, #5df711);
 background: -o-linear-gradient(top, green, #5df711);
 background: linear-gradient(top, green, #5df711);
 font-family: 'Permanent Marker', cursive;
+font-family: 'Sorts Mill Goudy', serif;
+font-size: 18px;
+max-width: 200px;
+padding: 100px 100px;
+border: solid;
 `
 
 
@@ -135,6 +142,7 @@ class UserProfilePage extends Component {
                                             <li>{condition.dateStarted}</li>
                                             <br/>
                                             <br/>
+                                            </MedicalConditonContainer>
 
 
                                             {condition.treatment.map((ailment, i) => {
@@ -157,7 +165,7 @@ class UserProfilePage extends Component {
                                                 )
                                             })}
 
-                                        </MedicalConditonContainer>
+                                      
                                     </MedicalConditionBox>
 
 
