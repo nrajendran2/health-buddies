@@ -19,14 +19,21 @@ display:flex;
 flex-direction: column;
 border: solid;
 background-color: purple;
+font-family: 'Times New Roman', Times, serif;
 `
 
 const MedicalConditonContainer = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 background-color: black;
 color: white;`
 
+const MedicalConditionBox = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-content: center;
+`
 
 
 class UserProfilePage extends Component {
@@ -66,7 +73,7 @@ getuserinfo = () => {
         return (
             <div>
             <FlexContainers>
-              <h1>{this.state.userinfo.username}</h1>
+              <h1>{this.state.userinfo.username}'s Health Log</h1>
                <ProfileImage src = {this.state.userinfo.profilepic}/>
 
 
@@ -79,6 +86,7 @@ getuserinfo = () => {
             this.state.userinfo.medicalCondition.map((condition, i) => {
                 return(
                     <div key = {i}>
+                    <MedicalConditionBox>
                    < MedicalConditonContainer>
 
                    <li> {condition.name}</li>
@@ -87,6 +95,9 @@ getuserinfo = () => {
                     <li>{condition.dateStarted}</li>
 
                   </MedicalConditonContainer>
+                  </MedicalConditionBox>
+                  
+                  
 
                     
                     </div>
