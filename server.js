@@ -23,7 +23,7 @@ connection.on('error', (Error )=> {
 app.use(logger('dev'))
 app.use(bodyParser.json())
 
-const UserController = require ('./controllers/userController')
+const UserController = require('./controllers/userController')
 const MedicalConditionController = require('./controllers/medicalConditionController')
 const TreatmentController = require('./controllers/treatmentController')
 
