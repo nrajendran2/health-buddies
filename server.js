@@ -5,7 +5,7 @@ const logger = require('morgan')
 const mongoose = require('mongoose')
 const UserController = require ('./Controllers/userController')
 const MedicalConditionController = require('./Controllers/medicalConditionController')
-const TreatmentController = require('./Controllers/TreatmentController')
+const TreatmentController = require('./Controllers/treatmentController')
 
 
 //connect to mongoose
