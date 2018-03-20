@@ -3,9 +3,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const mongoose = require('mongoose')
-const UserController = require ('./Controllers/userController')
-const MedicalConditionController = require('./Controllers/medicalConditionController')
-const TreatmentController = require('./Controllers/treatmentController')
+const UserController = require ('./controllers/userController')
+const MedicalConditionController = require('./controllers/medicalConditionController')
+const TreatmentController = require('./controllers/treatmentController')
 
 
 //connect to mongoose
