@@ -3,19 +3,11 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const mongoose = require('mongoose')
-const UserController = require ('./controllers/userController')
-const MedicalConditionController = require('./controllers/medicalConditionController')
-const TreatmentController = require('./controllers/treatmentController')
-
 
 //connect to mongoose
 mongoose.connect(process.env.MONGODB_URI)
 
 const app = express();
-
-
-
-
 
 //Logging if Database if is running or if there is an error
 
@@ -30,6 +22,11 @@ connection.on('error', (Error )=> {
 //MIDDLEWARE
 app.use(logger('dev'))
 app.use(bodyParser.json())
+
+const UserController = require ('./controllers/userController')
+const MedicalConditionController = require('./controllers/medicalConditionController')
+const TreatmentController = require('./controllers/treatmentController')
+
 app.use('/api/users', UserController)
 app.use('/api/users/:userid/medicalcondition', MedicalConditionController )
 app.use('/api/users/:userid/medicalcondition/:id/treatment', TreatmentController )
