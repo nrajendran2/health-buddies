@@ -3,6 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import MedicalCondition from './MedicalCondition';
 import EditUserPage from './EditUserPage';
+import HomeView from './HomeView';
 
 const ProfileImage = styled.img`
 height: 400px;
@@ -20,7 +21,7 @@ display:flex;
 flex-direction: column;
 border: solid black;
 font-family: 'Times New Roman', Times, serif;
-background-color: black;
+background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
 color: white;
 
 `
@@ -123,6 +124,7 @@ class UserProfilePage extends Component {
     render() {
         return (
             <div>
+               
                 <FlexContainers>
                     <h1>{this.state.userinfo.username}'s Health Log</h1>
                     <ProfileImage src={this.state.userinfo.profilepic} />
@@ -174,7 +176,7 @@ class UserProfilePage extends Component {
                                     </MedicalConditionBox>
 
 
-
+                                            
 
                                 </div>
 
@@ -187,6 +189,7 @@ class UserProfilePage extends Component {
 
                     }
                     <EditUserPage userId={this.props.match.params} />
+                
                 
 
             </div>
