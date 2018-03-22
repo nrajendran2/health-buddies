@@ -7,11 +7,15 @@ import axios from 'axios'
 
 
 
+
+const ullPage = styled.div`
+color:black;`
+
 const SignupWrapper = styled.div`
 color: black;
-background-image: url('http://www.env-health.org/IMG/siteon0.jpg?1340900275');
-background-size: cover;
-height: 300px;
+background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
+background-size: fit;
+height: 800px;
 font-family: 'Lobster', cursive;
 `
 const UsersContainer = styled.div`
@@ -29,6 +33,7 @@ display:flex;
 justify-content: center;
 
 `
+
 
 
 
@@ -63,7 +68,8 @@ class HomeView extends Component {
     render() {
         return (
             <div>
-                <SignupWrapper >
+             
+                <SignupWrapper>
                     <div>
 
 
@@ -76,7 +82,7 @@ class HomeView extends Component {
                         <Signup />
 
                     </div>
-                </SignupWrapper>
+               
 
 <ContainerofUsers>
                 <UsersContainer>
@@ -100,6 +106,7 @@ class HomeView extends Component {
 
                 </UsersContainer>
                 </ContainerofUsers>
+                </SignupWrapper>
             </div>
         );
     }
