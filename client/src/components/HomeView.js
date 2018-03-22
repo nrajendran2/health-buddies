@@ -14,9 +14,12 @@ color:black;`
 const SignupWrapper = styled.div`
 color: black;
 background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
-background-size: fit;
+background-repeat: no-repeat;
+background-size: cover;
 height: 800px;
+
 font-family: 'Lobster', cursive;
+align-content: center;
 `
 const UsersContainer = styled.div`
 color:green;

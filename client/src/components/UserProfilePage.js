@@ -6,8 +6,9 @@ import EditUserPage from './EditUserPage';
 import HomeView from './HomeView';
 
 const ProfileImage = styled.img`
-height: 400px;
-width: 300px;
+height: 300px;
+max-width: 300px;
+
 display: flex;
 border-radius: 50%;
 align-items: center;
@@ -23,6 +24,8 @@ border: solid black;
 font-family: 'Times New Roman', Times, serif;
 background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
 color: white;
+height: 400px;
+
 
 `
 
