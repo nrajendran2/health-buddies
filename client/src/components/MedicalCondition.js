@@ -1,15 +1,41 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import styled from 'styled-components'
+
+
+const Form = styled.div`
+    background: white;
+    font-family: 'Permanent Marker', cursive;
+font-family: 'Sorts Mill Goudy', serif;
+align-content: center;
+
+    `
+
+const Header = styled.div`
+background: white;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Sorts Mill Goudy', serif;
+
+
+
+`
 
 class MedicalCondition extends Component {
+  
+    
+  
     state = {
         name: '',
         description: '',
         symptoms: '',
         dateStarted: '',
+
+
     
 
     }
+
+    
 
     handleChange = (event) => {
         const newState = { ...this.state }
@@ -38,11 +64,13 @@ class MedicalCondition extends Component {
     render() {
         return (
             <div>
+                <Header>
                 <h1>Add New Medical Condition</h1>
-                
+                </Header>
                 <form onSubmit={this.saveNewMedicalCondition}>
                     <div>
                         <ul>
+                            <Form>
                                 
                             <li> <label htmlFor="name">Name of Condition</label>
                                 <input type="text" name="name"
@@ -67,6 +95,7 @@ class MedicalCondition extends Component {
                                     value={this.state.dateStarted}
                                     onChange={this.handleChange}
                                 /> </li>
+                                </Form>
                         </ul>
                     </div>
                     

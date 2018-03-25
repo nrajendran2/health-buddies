@@ -8,18 +8,29 @@ import axios from 'axios'
 
 
 
-const ullPage = styled.div`
-color:black;`
-
-const SignupWrapper = styled.div`
-color: black;
+const FullPage = styled.div`
+color:black;
 background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
 background-repeat: no-repeat;
 background-size: cover;
-height: 800px;
+background-position: center center;
+height: 100vh;
+width: 100vw;
+background-attachment: fixed;
+`
 
+const SignupWrapper = styled.div`
+color: white;
 font-family: 'Lobster', cursive;
 align-content: center;
+font-size: 24px;
+
+
+
+h1 {
+    font-size: 60px;
+    color: 
+}
 `
 const UsersContainer = styled.div`
 color:green;
@@ -70,8 +81,7 @@ class HomeView extends Component {
 
     render() {
         return (
-            <div>
-             
+            <FullPage>
                 <SignupWrapper>
                     <div>
 
@@ -110,7 +120,7 @@ class HomeView extends Component {
                 </UsersContainer>
                 </ContainerofUsers>
                 </SignupWrapper>
-            </div>
+            </FullPage>
         );
     }
 }

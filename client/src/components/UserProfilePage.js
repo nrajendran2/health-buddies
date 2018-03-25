@@ -5,6 +5,14 @@ import MedicalCondition from './MedicalCondition';
 import EditUserPage from './EditUserPage';
 import HomeView from './HomeView';
 
+const BodyStyle = styled.div`
+background-image: url('http://seschoolofmovement.com/wp-content/uploads/2015/10/yogafeat-1.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+
+
+`
+
 const ProfileImage = styled.img`
 height: 300px;
 max-width: 300px;
@@ -16,18 +24,26 @@ background-color: white;
 
 `
 const FlexContainers = styled.div`
-
 background-size: cover;
 display:flex;
 flex-direction: column;
 border: solid black;
 font-family: 'Times New Roman', Times, serif;
-background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
+/* background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg'); */
 color: white;
 height: 400px;
+display:flex;
+flex-direction: row;
 
 
 `
+const Vitals = styled.div`
+display: flex;
+font-size: 20px;
+flex-direction: column;
+flex: flex-end;
+align-content: center;
+margin:  70px;`
 
 const MedicalConditonContainer = styled.div`
 display: flex;
@@ -45,6 +61,8 @@ background: -webkit-linear-gradient(top, maroon, #d6c5dd);
   background: linear-gradient(top, maroon, #d6c5dd);
   font-family: 'Permanent Marker', cursive;
 font-family: 'Sorts Mill Goudy', serif;
+border-radius:50%;
+background-color: black;
 
   /* background: -webkit-linear-gradient(top, purple, #a856c9);
   background: -moz-linear-gradient(top, purple, #a856c9);
@@ -58,8 +76,9 @@ font-family: 'Sorts Mill Goudy', serif;
 const MedicalConditionBox = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: center;
 align-content: center;
+
 
 `
 const AilmentBox = styled.div`
@@ -77,6 +96,7 @@ font-size: 18px;
 max-width: 200px;
 padding: 100px 100px;
 border: solid;
+border-radius: 50%;
 
 
 img { 
@@ -126,11 +146,20 @@ class UserProfilePage extends Component {
 
     render() {
         return (
-            <div>
+            <BodyStyle>
                
                 <FlexContainers>
                     <h1>{this.state.userinfo.username}'s Health Log</h1>
                     <ProfileImage src={this.state.userinfo.profilepic} />
+
+                    <Vitals>
+
+
+                    <li> Heart Rate - 89bpm </li>
+                    <li> Blood Pressure - 130/70b </li>
+                    <li> Temperature - 100 </li>
+
+                    </Vitals>
 
 
 </FlexContainers>
@@ -142,6 +171,7 @@ class UserProfilePage extends Component {
                         this.state.userinfo.medicalCondition.map((condition, i) => {
                             return (
                                 <div key={i}>
+                              
                                     <MedicalConditionBox>
                                         < MedicalConditonContainer>
                                             <h1>{condition.name}</h1>
@@ -195,7 +225,7 @@ class UserProfilePage extends Component {
                 
                 
 
-            </div>
+            </BodyStyle>
         );
     }
 }
