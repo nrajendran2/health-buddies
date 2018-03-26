@@ -39,11 +39,12 @@ flex-direction: row;
 `
 const Vitals = styled.div`
 display: flex;
-font-size: 20px;
+font-size: 30px;
 flex-direction: column;
 flex: flex-end;
 align-content: center;
 margin:  70px;`
+
 
 const MedicalConditonContainer = styled.div`
 display: flex;

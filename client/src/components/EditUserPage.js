@@ -11,6 +11,11 @@ align-items: center;
 background-color: maroon;
 color: white;
 `
+const EditUser= styled.div`
+margin-top: 30px;
+color:white;
+`
+
 
 
 class EditUserPage extends Component {
@@ -58,7 +63,7 @@ class EditUserPage extends Component {
 
 
         return (
-            <div>
+            <EditUser>
                 <h1>Edit User </h1>
                 <form onSubmit={this.submitNewUserName}>
                     <div>
@@ -91,7 +96,7 @@ class EditUserPage extends Component {
                     <button type="submit">Update User</button>
                 </form>
 
-            </div>
+            </EditUser>
         );
     }
 }
