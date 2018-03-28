@@ -11,7 +11,7 @@ align-items: center;
 background-color: maroon;
 color: white;
 `
-const EditUser= styled.div`
+const EditUser = styled.div`
 margin-top: 30px;
 color:white;
 `
@@ -35,7 +35,7 @@ class EditUserPage extends Component {
         const editState = { ...this.state.user }
         editState[event.target.name] = event.target.value
 
-        this.setState({user: editState})
+        this.setState({ user: editState })
     }
 
 
@@ -51,7 +51,7 @@ class EditUserPage extends Component {
         axios.patch(`/api/users/${this.props.userId.userid}`, payload).then((res) => {
 
             console.log(res.data)
-            this.setState({ user: res.data})
+            this.setState({ user: res.data })
             window.location.reload()
 
         })

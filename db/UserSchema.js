@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const {MedicalConditionSchema} = require('./MedicalCondition')
+const { MedicalConditionSchema } = require('./MedicalCondition')
 
 
-const UserSchema = new Schema ({
+const UserSchema = new Schema({
     name: String,
     username: String,
     age: Number,

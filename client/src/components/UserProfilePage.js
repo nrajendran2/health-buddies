@@ -148,7 +148,7 @@ class UserProfilePage extends Component {
     render() {
         return (
             <BodyStyle>
-               
+
                 <FlexContainers>
                     <h1>{this.state.userinfo.username}'s Health Log</h1>
                     <ProfileImage src={this.state.userinfo.profilepic} />
@@ -156,75 +156,75 @@ class UserProfilePage extends Component {
                     <Vitals>
 
 
-                    <li> Heart Rate - 89bpm </li>
-                    <li> Blood Pressure - 130/70b </li>
-                    <li> Temperature - 100 </li>
+                        <li> Heart Rate - 89bpm </li>
+                        <li> Blood Pressure - 130/70b </li>
+                        <li> Temperature - 100 </li>
 
                     </Vitals>
 
 
-</FlexContainers>
+                </FlexContainers>
 
 
-                    <MedicalCondition userID={this.props.match.params} />
+                <MedicalCondition userID={this.props.match.params} />
 
-                    {
-                        this.state.userinfo.medicalCondition.map((condition, i) => {
-                            return (
-                                <div key={i}>
-                              
-                                    <MedicalConditionBox>
-                                        < MedicalConditonContainer>
-                                            <h1>{condition.name}</h1>
+                {
+                    this.state.userinfo.medicalCondition.map((condition, i) => {
+                        return (
+                            <div key={i}>
 
-                                            <li>{condition.description}</li>
-                                            <li> {condition.symptoms}</li>
-                                            <li>{condition.dateStarted}</li>
-                                            <br/>
-                                            <br/>
-                                            </MedicalConditonContainer>
+                                <MedicalConditionBox>
+                                    < MedicalConditonContainer>
+                                        <h1>{condition.name}</h1>
 
-
-                                            {condition.treatment.map((ailment, i) => {
-                                                return (
-                                                    <div key={i}>
-
-                                                    <AilmentBox>
-                                                       <h1> {ailment.name}</h1>
+                                        <li>{condition.description}</li>
+                                        <li> {condition.symptoms}</li>
+                                        <li>{condition.dateStarted}</li>
+                                        <br />
+                                        <br />
+                                    </MedicalConditonContainer>
 
 
-                                                      <img src = {ailment.image}/>
-                                                       <li> {ailment.symptoms}</li>
-                                                       <li> {ailment.doctor}</li>
-                                                       <li> {ailment.medications}</li>
-                                                       <li>{ailment.otherComments}</li>
+                                    {condition.treatment.map((ailment, i) => {
+                                        return (
+                                            <div key={i}>
 
-                                                       </AilmentBox>
-
-
-                                                    </div>
-                                                )
-                                            })}
-
-                                      
-                                    </MedicalConditionBox>
+                                                <AilmentBox>
+                                                    <h1> {ailment.name}</h1>
 
 
-                                            
+                                                    <img src={ailment.image} />
+                                                    <li> {ailment.symptoms}</li>
+                                                    <li> {ailment.doctor}</li>
+                                                    <li> {ailment.medications}</li>
+                                                    <li>{ailment.otherComments}</li>
 
-                                </div>
-
-
-                            )
-
-
-                        })
+                                                </AilmentBox>
 
 
-                    }
-                    <EditUserPage userId={this.props.match.params} />
-                
-                
+                                            </div>
+                                        )
+                                    })}
+
+
+                                </MedicalConditionBox>
+
+
+
+
+                            </div>
+
+
+                        )
+
+
+                    })
+
+
+                }
+                <EditUserPage userId={this.props.match.params} />
+
+
 
             </BodyStyle>
         );

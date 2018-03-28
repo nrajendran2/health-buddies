@@ -87,7 +87,7 @@ class HomeView extends Component {
 
 
 
-                   
+
 
                         <h1>HealthBuddies </h1>
 
@@ -95,30 +95,30 @@ class HomeView extends Component {
                         <Signup />
 
                     </div>
-               
-
-<ContainerofUsers>
-                <UsersContainer>
-
-                    {
-                        this.state.users.map((user, i) => {
-                            return (
-                                <div key={i}>
-
-                                    <li><Link to={`/healthbuddies/${user._id}`}> {user.name}</Link></li>
-
-                                    <button onClick={() => this.remove(user._id)}> Delete </button>
-
-                                </div>
-                            )
-
-                        })
-
-                    }
 
 
-                </UsersContainer>
-                </ContainerofUsers>
+                    <ContainerofUsers>
+                        <UsersContainer>
+
+                            {
+                                this.state.users.map((user, i) => {
+                                    return (
+                                        <div key={i}>
+
+                                            <li><Link to={`/healthbuddies/${user._id}`}> {user.name}</Link></li>
+
+                                            <button onClick={() => this.remove(user._id)}> Delete </button>
+
+                                        </div>
+                                    )
+
+                                })
+
+                            }
+
+
+                        </UsersContainer>
+                    </ContainerofUsers>
                 </SignupWrapper>
             </FullPage>
         );

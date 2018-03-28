@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link , Redirect} from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 
 
@@ -36,16 +36,16 @@ class SignUp extends Component {
 
         axios.post(`/api/users`, payload).then((res) => {
             console.log(res.data)
-       
-        this.setState({ redirectToUserProfilePage: true, newUserId: res.data._id })
-    })
+
+            this.setState({ redirectToUserProfilePage: true, newUserId: res.data._id })
+        })
     }
 
-    
+
 
     render() {
         if (this.state.redirectToUserProfilePage) {
-            return <Redirect to ={`/healthbuddies/${this.state.newUserId}`} />
+            return <Redirect to={`/healthbuddies/${this.state.newUserId}`} />
         }
 
         return (
@@ -79,8 +79,8 @@ class SignUp extends Component {
                                 /> </li>
                         </ul>
                     </div>
-                    
-          <button type="submit">Create New User</button>
+
+                    <button type="submit">Create New User</button>
                 </form>
             </div>
 

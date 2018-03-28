@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 
         const newMedicalCondition = new MedicalCondition({
             name: req.body.name,
-            description:req.body.description,
+            description: req.body.description,
             symptoms: req.body.symptoms,
             dateStarted: req.body.dateStarted
         })
@@ -41,17 +41,17 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
 
     // Find company from companyId route param
-    
+
     User.findById(req.params.userid).then((user) => {
-  
-      // Use the .id method to extract a single soda from company.sodas
-      const medicalCondition = user.medicalCondition.id(req.params.id)
-  
-      // connect it to a soda/show view
-      res.send (medicalCondition)
-      
+
+        // Use the .id method to extract a single soda from company.sodas
+        const medicalCondition = user.medicalCondition.id(req.params.id)
+
+        // connect it to a soda/show view
+        res.send(medicalCondition)
+
     })
-  })
+})
 
 
 
