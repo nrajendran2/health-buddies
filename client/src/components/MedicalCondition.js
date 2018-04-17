@@ -3,13 +3,13 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 
-// const Form = styled.div`
-//     background: white;
-//     font-family: 'Permanent Marker', cursive;
-// font-family: 'Sorts Mill Goudy', serif;
-// align-content: center;
+const Form = styled.div`
+    background: white;
+    font-family: 'Permanent Marker', cursive;
+font-family: 'Sorts Mill Goudy', serif;
+align-content: center;
 
-//     `
+    `
 
 const Header = styled.div`
 background-color: black;

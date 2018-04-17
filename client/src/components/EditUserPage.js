@@ -48,7 +48,8 @@ class EditUserPage extends Component {
             profilepic: this.state.user.profilepic
         }
 
-        axios.patch(`/api/users/${this.props.userId.userid}`, payload).then((res) => {
+        axios.patch(`/api/users/${this.props.userId.userid}`, payload)
+        .then((res) => {
 
             console.log(res.data)
             this.setState({ user: res.data })

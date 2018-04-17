@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link, Redirect } from 'react-router-dom'
+import styled from 'styled-components'
 
 
+const SubmitButton= styled.div`
+align-content:center;
+margin-left: 120px;`
 
 class SignUp extends Component {
     state = {
@@ -79,8 +83,9 @@ class SignUp extends Component {
                                 /> </li>
                         </ul>
                     </div>
-
+                        <SubmitButton>
                     <button type="submit">Create New User</button>
+                    </SubmitButton>
                 </form>
             </div>
 

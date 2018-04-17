@@ -24,6 +24,9 @@ color: white;
 font-family: 'Lobster', cursive;
 align-content: center;
 font-size: 24px;
+margin-left: 600px;
+
+
 
 
 
@@ -43,8 +46,8 @@ background-color: white;
 max-width: 300px;
 `
 const ContainerofUsers = styled.div`
-display:flex;
-justify-content: center;
+/* display:flex;
+justify-content: center; */
 
 `
 
@@ -87,12 +90,13 @@ class HomeView extends Component {
 
 
 
-
+            
 
                         <h1>HealthBuddies </h1>
-
-
+                        
+                      
                         <Signup />
+                     
 
                     </div>
 

@@ -15,7 +15,7 @@ const connection = mongoose.connection
 connection.on('connected', () => {
     console.log("Mongoose is rocking and rolling")
 })
-connection.on('error', (Error )=> {
+connection.on('error', (Error) => {
     console.log("Mongoose Error:", error)
 })
 
@@ -28,8 +28,8 @@ const MedicalConditionController = require('./controllers/medicalConditionContro
 const TreatmentController = require('./controllers/treatmentController')
 
 app.use('/api/users', UserController)
-app.use('/api/users/:userid/medicalcondition', MedicalConditionController )
-app.use('/api/users/:userid/medicalcondition/:id/treatment', TreatmentController )
+app.use('/api/users/:userid/medicalcondition', MedicalConditionController)
+app.use('/api/users/:userid/medicalcondition/:id/treatment', TreatmentController)
 
 
 
@@ -43,7 +43,7 @@ app.use(express.static(`${__dirname}/client/build`))
 
 app.get('/*', (req, res) => {
     res.sendFile(`${__dirname}/client/build/index.html`)
-  })
+})
 
 
 
@@ -51,5 +51,5 @@ const PORT = process.env.PORT || 3001
 
 
 app.listen(PORT, () => {
-    console.log('App is listening on port '  +  PORT)
+    console.log('App is listening on port ' + PORT)
 })
