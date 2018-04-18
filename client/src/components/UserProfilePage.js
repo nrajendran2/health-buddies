@@ -21,7 +21,7 @@ a{
 
 const BodyStyle = styled.div `
  background-image: url('http://seschoolofmovement.com/wp-content/uploads/2015/10/yogafeat-1.jpg'); 
-background-size: cover;
+/* background-size: cover; */
 background-repeat: no-repeat;
 
 
@@ -44,7 +44,7 @@ const FlexContainers = styled.div `
 background-size: cover;
 display:flex;
 flex-direction: column;
-border: solid black;
+/* border: solid black; */
 font-family: 'Times New Roman', Times, serif;
 /* background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg'); */
 color: black;
@@ -96,6 +96,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-content: center;
+margin-top: 25px;
 
 
 `
