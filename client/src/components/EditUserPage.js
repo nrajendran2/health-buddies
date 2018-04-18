@@ -2,19 +2,32 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import axios from 'axios'
 
+
+
 const FlexContainer = styled.div`
 margin-top: 30px;
 margin-bottom: 30px;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: maroon;
 color: white;
 `
 const EditUser = styled.div`
-margin-top: 30px;
+justify-content: center;
 color:white;
+
+
+h1{
+    margin-left: 620px;
+}
 `
+
+const Input = styled.input`
+font-size: 20px;
+background-color: white;`
+
+const Submit = styled.div`
+margin-left: 620px;`
 
 
 
@@ -75,7 +88,7 @@ class EditUserPage extends Component {
 
 
                                 <li><label htmlFor="username">User Name</label>
-                                    <input type="text" name="username" onChange={this.handleChange} value={this.state.username} />
+                                    <Input type="text" name="username" onChange={this.handleChange} value={this.state.username} />
                                 </li>
 
                                 <li><label htmlFor="name">Name</label>
@@ -93,8 +106,9 @@ class EditUserPage extends Component {
                         </FlexContainer>
                     </div>
 
-
+                    <Submit>
                     <button type="submit">Update User</button>
+                    </Submit>
                 </form>
 
             </EditUser>

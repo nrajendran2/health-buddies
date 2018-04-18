@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Signup from './Signup'
 import styled from 'styled-components'
 import axios from 'axios'
+import EditUserPage from './EditUserPage';
 
 
 
@@ -10,7 +11,7 @@ import axios from 'axios'
 
 const FullPage = styled.div`
 color:black;
-background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/cb/25/a2cb254bc08b248a38eacd116041a45b.jpg');
+background-image: url('https://i.imgur.com/17okqo1.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
@@ -119,6 +120,8 @@ class HomeView extends Component {
                                 })
 
                             }
+
+                             
 
 
                         </UsersContainer>
