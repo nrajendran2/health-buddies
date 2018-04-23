@@ -28,7 +28,7 @@ const TKA = new Treatment({
 })
 
 const defibrilation = new Treatment({
-    name: "Defirbrilation & Oxygen Therapy",
+    name: "Defibrilation & Oxygen Therapy",
     doctor: "Dr. Patel",
     image: "http://www.washingtonhra.com/wp-content/uploads/Figure-4-ICD-image2.jpg",
     medications: "Blood Thinners, Beta-Blockers, ACE",

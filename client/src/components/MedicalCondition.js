@@ -54,6 +54,7 @@ h1{
     font-size: 30px;
 }
 
+
 `
 const Button = styled.button`
 margin-left: 120px;
@@ -89,10 +90,10 @@ class MedicalCondition extends Component {
 
         console.log(payload)
 
-        axios
-            .post(`/api/users/${this.props.userID.userid}/medicalcondition`, payload)
+        axios.post(`/api/users/${this.props.userID.userid}/medicalcondition`, payload)
             .then((res) => {
                 console.log("data", res.data)
+
                 //this.setState({ redirectToUserProfilePage: true, newUserId: res.data._id })
             })
     }
@@ -106,7 +107,8 @@ class MedicalCondition extends Component {
                 <div>
 
                     <FormWrapper>
-                        <Form onSubmit={this.saveNewMedicalCondition}>
+                        <Form>
+                        <form onSubmit={this.saveNewMedicalCondition}>
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -165,8 +167,9 @@ class MedicalCondition extends Component {
                                 </form>
                             </div>
                             <Button>
-                            <button>Submit</button>
+                            <button type="submit">Submit</button>
                             </Button>
+                            </form>
                         </Form>
 
                     </FormWrapper>
@@ -228,3 +231,14 @@ export default MedicalCondition;
 
 </form> */
 }
+
+
+
+
+
+
+
+
+
+
+

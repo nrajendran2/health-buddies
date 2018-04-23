@@ -72,17 +72,18 @@ border: solid;
 justify-content: center;
 font-family: Arial;
 font-size: 18px;
-max-width: 400px;
-max-height: 400px;
+max-width: 500px;
+max-height: 500px;
 padding: 100px 100px;
 background: -webkit-linear-gradient(top, maroon, #d6c5dd);
   background: -moz-linear-gradient(top, maroon, #d6c5dd);
   background: -o-linear-gradient(top, maroon, #d6c5dd);
   background: linear-gradient(top, maroon, #d6c5dd);
-  font-family: 'Permanent Marker', cursive;
-font-family: 'Sorts Mill Goudy', serif;
+  font-family: 'Quicksand', sans-serif;
+
 background-color: black;
 text-align:center;
+border-radius: 50%;
 
   /* background: -webkit-linear-gradient(top, purple, #a856c9);
   background: -moz-linear-gradient(top, purple, #a856c9);
@@ -97,9 +98,17 @@ flex-direction: row;
 justify-content: center;
 align-content: center;
 margin-top: 25px;
+text-align: center;
+
+span { 
+font-weight: bold;
+font-size: 20px;
+}
+
 
 
 `
+
 const AilmentBox = styled.div `
 display:flex;
 flex: wrap;
@@ -109,20 +118,26 @@ background: -webkit-linear-gradient(top, darkgreen, #d6c5dd);
 background: -moz-linear-gradient(top, darkgreen, #d6c5dd);
 background: -o-linear-gradient(top, darkgreen, #d6c5dd);
 background: linear-gradient(top, darkgreen, #d6c5dd);
-font-family: 'Permanent Marker', cursive;
-font-family: 'Sorts Mill Goudy', serif;
+font-family: 'Quicksand', sans-serif;
 font-size: 18px;
-max-width: 400px;
-max-height: 400px;
+max-width: 500px;
+max-height: 500px;
 padding: 100px 100px;
 border: solid;
 text-align: center;
+border-radius: 50%;
 
 
 img { 
     height: 200px;
     width: 200px;
+    align-content: center;
+    margin-left: 120px;
 
+}
+
+span {
+    font-weight: bold;
 }
 `
 
@@ -184,12 +199,12 @@ class UserProfilePage extends Component {
                                     < MedicalConditonContainer>
                                         <h2>{condition.name}</h2>
 
-                                        <li> Description: {condition.description}</li>
+                                        <li><span> Description:</span> {condition.description}</li>
                                         <br/>
 
-                                        <li>Symptoms:{condition.symptoms}</li>
+                                        <li><span>Symptoms:</span>{condition.symptoms}</li>
                                             <br/>
-                                        <li>{condition.dateStarted}</li>
+                                        <li><span>Date Started:</span>{condition.dateStarted}</li>
                                         <br/>
                                         <br/>
                                     </MedicalConditonContainer>
@@ -206,11 +221,10 @@ class UserProfilePage extends Component {
                                                         <img src={ailment.image}/>
                                                         <br/>
 
-                                                        
-                                                        <li>Symptoms: {ailment.symptoms}</li>
-                                                            <li>Doctors Name: {ailment.doctor}</li>
-                                                        <li>Medications: {ailment.medications}</li>
-                                                        <li>Comments:{ailment.otherComments}</li>
+                                                        <li><span>Natural Remedies</span> {ailment.naturalRemedies}</li>
+                                                        <li><span>Doctors Name:</span> {ailment.doctor}</li>
+                                                        <li><span>Medications:</span> {ailment.medications}</li>
+                                                        <li><span>Comments:</span>{ailment.otherComments}</li>
 
                                                     </AilmentBox>
 

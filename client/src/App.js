@@ -12,6 +12,9 @@ import {injectGlobal} from 'styled-components'
 injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Sorts+Mill+Goudy');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+<style>
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+</style>
 `
 
 
